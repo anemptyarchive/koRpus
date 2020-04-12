@@ -1,2 +1,3 @@
 # koRpus
-koRpus package
+
+koRpus packageを使ったあれこれ(予定)
