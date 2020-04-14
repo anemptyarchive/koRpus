@@ -1,0 +1,60 @@
+tag,wclass,POS1,POS2,,Description,品詞,Example
+CC,conjunction,接続詞,,,Coordinating conjunction,等位接続詞,"and, but, or, &"
+CD,,名詞,数,,Cardinal number,基数,"1, three"
+DT,determiner,,,,Determiner,限定詞,the
+EX,,,,,existential there,存在文のThere,there is
+FW,foreign,,,,foreign word,外国語,d'œuvre
+IN,preposition,,,,preposition/subord. conj.,前置詞または従属接続詞,"in,of,like,after,whether"
+IN/that,,,,,complementizer,補文素,that
+JJ,adjective,形容詞,,,adjective,形容詞,green
+JJR,adjective,形容詞,,,"adjective, comparative",形容詞の比較級,greener
+JJS,adjective,形容詞,,,"adjective, superlative",形容詞の最上級,greenest
+LS,,,,,list marker,リスト項目のマーカー,"(1),"
+MD,modal,法助動詞,,,modal,法助動詞,"could, will"
+NN,noun,名詞,,,"noun, singular or mass",名詞の単数形または不可算名詞,table
+NNS,noun,名詞,,,noun plural,名詞の複数形,tables
+NP,noun,名詞,,,"proper noun, singular",固有名詞の単数名,John
+NPS,noun,名詞,,,"proper noun, plural",固有名詞の複数形,Vikings
+PDT,,,,,predeterminer,前限定詞,both the boys
+POS,,,,,possessive ending,所有格語尾,friend's
+PP,pronoun,名詞,代名詞,一般,personal pronoun,人称代名詞,"I, he, it"
+PP$,pronoun,名詞,代名詞,,possessive pronoun,所有代名詞,"my, his"
+RB,adverb,副詞,,,adverb,副詞,"however, usually, here, not"
+RBR,adverb,副詞,,,"adverb, comparative",副詞の比較級,better
+RBS,adverb,副詞,,,"adverb, superlative",副詞の最上級,best
+RP,particle,,,,particle,不変化詞（句動詞を構成する前置詞）,give up
+SENT,,記号,句点,,end punctuation,文末の句読点記号,"?, !, ."
+SYM,,記号,,,symbol,記号,"@, +, *, ^, |, ="
+TO,to,,,,to,to,"to go, to him"
+UH,,,,,interjection,間投詞,uhhuhhuhh
+VB,verb,動詞,,,"verb be, base form",be動詞の原形,be
+VBD,verb,動詞,,,"verb be, past",be動詞の過去形,was|were
+VBG,verb,動詞,,,"verb be, gerund/participle",be動詞の動名詞または現在分詞,being
+VBN,verb,動詞,,,"verb be, past participle",be動詞の過去分詞,been
+VBZ,verb,動詞,,,"verb be, pres, 3rd p. sing",be動詞の三人称単数形現在,is
+VBP,verb,動詞,,,"verb be, pres non-3rd p.",be動詞の三人称単数形以外の現在,am|are
+VD,verb,動詞,,,"verb do, base form",do動詞の原形,do
+VDD,verb,動詞,,,"verb do, past",do動詞の過去形,did
+VDG,verb,動詞,,,verb do gerund/participle,do動詞の動名詞または現在分詞,doing
+VDN,verb,動詞,,,"verb do, past participle",do動詞の過去分詞,done
+VDZ,verb,動詞,,,"verb do, pres, 3rd per.sing",do動詞の三人称単数形現在,does
+VDP,,,,,"verb do, pres, non-3rd per.",do動詞の三人称単数形以外の現在,do
+VH,,,,,"verb have, base form",have動詞の原形,have
+VHD,,,,,"verb have, past",have動詞の過去形,had
+VHG,,,,,"verb have, gerund/participle",have動詞の動名詞または現在分詞,having
+VHN,,,,,"verb have, past participle",have動詞の過去分詞,had
+VHZ,,,,,"verb have, pres 3rd per.sing",have動詞の三人称単数形現在,has
+VHP,,,,,"verb have, pres non-3rd per.",have動詞の三人称単数形以外の現在,have
+VV,verb,動詞,,,"verb, base form",動詞の原形,take
+VVD,verb,動詞,,,"verb, past tense",動詞の過去形,took
+VVG,verb,動詞,,,"verb, gerund/participle",動詞の動名詞または現在分詞,taking
+VVN,verb,動詞,,,"verb, past participle",動詞の過去分詞,taken
+VVP,verb,動詞,三単現,,"verb, present, non-3rd p.",動詞の三人称単数形現在,take
+VVZ,verb,動詞,非三単現,,"verb, present 3d p. sing.",動詞の三人称単数形以外の現在,takes
+WDT,,,,,wh-determiner,Wh限定詞,which
+WP,pronoun,代名詞,Wh,,wh-pronoun,Wh代名詞,"who, what"
+WP$,pronoun,代名詞,,,possessive wh-pronoun,所有関係代名詞,whose
+WRB,,副詞,Wh,,wh-adverb,Wh副詞,"where, when"
+",",comma,記号,読点,,,,","
+:,,記号,一般結合,,general joiner,一般結合記号,";, -, --"
+$,,記号,通貨,,currency symbol,通貨記号,"$, £"
