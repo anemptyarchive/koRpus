@@ -43,7 +43,7 @@ tt_data <- res_tt %>%
 
 # 対応表を読み込む
 pos_data <- read_csv(
-  "table_data/pos_data.csv", 
+  "table_data/PoS_data_utf8.csv", 
   col_types = cols(
     tag = col_factor(), 
     wclass = col_factor()
@@ -76,3 +76,58 @@ res_mc <- docDF(paste(folder_name, file_name, sep = "/"), type = 1) %>%
   as_tibble()
 
 
+
+
+# 複数ver -----------------------------------------------------------------
+
+# フォルダ名を指定
+folder_name <- "text_data/lyrics_avr"
+
+# ファイル名を取得
+file_name_list <- list.files(path = folder_name, pattern = "txt")
+
+# TreeTaggerによる英文形態素解析
+tt_data <- tibble(
+  TERM = character(), 
+  wclass = factor(), 
+  tag = factor()
+)
+for(i in seq_along(file_name_list)) {
+  
+  # ファイル名を抽出
+  file_name <- file_name_list[i]
+  
+  # 形態素解析
+  res_tt <- taggedText(treetag(paste(folder_name, file_name, sep = "/"))) %>% 
+    as_tibble()
+  
+  # 必要なデータを抽出
+  tmp_tt_data <- res_tt %>% 
+    select(lemma, wclass, tag) %>% # 必要な列を取り出す
+    count(lemma, wclass, tag) %>% # 単語の出現頻度を集計
+    rename(TERM = lemma, !!file_name := n) %>% # RMeCab仕様に列名を変更
+    arrange(TERM) # 昇順に並べ替え
+  
+  # 結果を結合
+  tt_data <- full_join(tt_data, tmp_tt_data, by = c("TERM", "wclass", "tag"))
+  
+  # 動作確認
+  print(i)
+}
+
+# NAを0に置換
+tt_data[is.na.data.frame(tt_data)] <- 0
+
+
+# RMeCab風に変換
+mc_data <- tt_data %>% 
+  left_join(wclass_data, by = "wclass") %>% # 品詞(大分類)情報を結合
+  left_join(tag_data, by = "tag") %>% # 品詞(細分類)情報を結合
+  select(TERM, POS1, POS2, all_of(file_name_list)) # 必要な列を取り出す
+
+
+# (確認用)MeCabによる形態素解析
+res_mc <- docDF(folder_name, type = 1) %>% 
+  as_tibble()
+
+warnings()
